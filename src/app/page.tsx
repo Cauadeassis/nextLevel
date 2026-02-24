@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import styles from "./styles.module.css";
-import EmailField from "./components/emailField";
-import PasswordField from "./components/passwordField";
+import EmailField from "../components/emailField";
+import PasswordField from "../components/passwordField";
 
 type Step =
   | "login"
@@ -14,7 +13,6 @@ type Step =
   | "success";
 
 export default function Login() {
-  const router = useRouter();
   const [step, setStep] = useState<Step>("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
